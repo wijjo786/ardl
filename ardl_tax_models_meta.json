@@ -1,0 +1,196 @@
+{
+  "stationarity_report": [
+    {
+      "series": "income_tax",
+      "ADF level p": 0.9770002189017927,
+      "I(0) at 5%?": false,
+      "ADF diff p": 0.007261064293876021,
+      "I(1) at 5%?": true,
+      "Flag I(2) risk": false
+    },
+    {
+      "series": "gst",
+      "ADF level p": 0.3442630025921686,
+      "I(0) at 5%?": false,
+      "ADF diff p": 0.000130844983297097,
+      "I(1) at 5%?": true,
+      "Flag I(2) risk": false
+    },
+    {
+      "series": "fed",
+      "ADF level p": 0.9930828858924734,
+      "I(0) at 5%?": false,
+      "ADF diff p": 0.26227121326384195,
+      "I(1) at 5%?": false,
+      "Flag I(2) risk": true
+    },
+    {
+      "series": "gdp_real",
+      "ADF level p": 0.6875997375060903,
+      "I(0) at 5%?": false,
+      "ADF diff p": 0.0002987724994683492,
+      "I(1) at 5%?": true,
+      "Flag I(2) risk": false
+    },
+    {
+      "series": "gdp_growth",
+      "ADF level p": 0.004229161319006852,
+      "I(0) at 5%?": true,
+      "ADF diff p": 1.6555316890750125e-10,
+      "I(1) at 5%?": true,
+      "Flag I(2) risk": false
+    },
+    {
+      "series": "inflation",
+      "ADF level p": 0.7106957882624504,
+      "I(0) at 5%?": false,
+      "ADF diff p": 2.572205346832452e-06,
+      "I(1) at 5%?": true,
+      "Flag I(2) risk": false
+    },
+    {
+      "series": "unemployment",
+      "ADF level p": 0.20449025862000397,
+      "I(0) at 5%?": false,
+      "ADF diff p": 9.304760626810521e-07,
+      "I(1) at 5%?": true,
+      "Flag I(2) risk": false
+    },
+    {
+      "series": "imports_real",
+      "ADF level p": 0.9676070905550603,
+      "I(0) at 5%?": false,
+      "ADF diff p": 0.0005252577235654496,
+      "I(1) at 5%?": true,
+      "Flag I(2) risk": false
+    },
+    {
+      "series": "govexp",
+      "ADF level p": 0.9129079227604795,
+      "I(0) at 5%?": false,
+      "ADF diff p": 1.4080731398460071e-15,
+      "I(1) at 5%?": true,
+      "Flag I(2) risk": false
+    },
+    {
+      "series": "dummy_2014",
+      "ADF level p": 0.8548270738134192,
+      "I(0) at 5%?": false,
+      "ADF diff p": 1.491237763114608e-06,
+      "I(1) at 5%?": true,
+      "Flag I(2) risk": false
+    }
+  ],
+  "assumptions": {
+    "Real_GDP_Growth": 0.03,
+    "Consumption_Growth": 0.04,
+    "Imports_Growth": 0.05,
+    "Inflation_Rate": 0.12,
+    "Unemployment_Rate": 6.5
+  },
+  "x_vars_used": [
+    "gdp_real",
+    "gdp_growth",
+    "inflation",
+    "unemployment",
+    "imports_real",
+    "govexp",
+    "dummy_2014"
+  ],
+  "log_transformed_cols": [
+    "gdp_real",
+    "imports_real",
+    "govexp",
+    "income_tax",
+    "gst",
+    "fed"
+  ],
+  "data_rows_used": 33,
+  "index_start": "1992",
+  "index_end": "2024",
+  "income_tax": {
+    "selected_order": "{'inflation': [0, 1], 'unemployment': [0, 1], 'govexp': [0], 'dummy_2014': [0]}",
+    "nobs": 32,
+    "aic": -63.48435231929139,
+    "bic": -50.29272919409385,
+    "params": {
+      "const": -2.726192333826134,
+      "income_tax.L1": 0.7714805382641856,
+      "inflation.L0": 0.0032094522528727243,
+      "inflation.L1": 0.008305856879028822,
+      "unemployment.L0": -0.03373229197097993,
+      "unemployment.L1": 0.027631248591397317,
+      "govexp.L0": 0.20289808308666935,
+      "dummy_2014.L0": 0.11089350977899048
+    },
+    "bounds_test": null,
+    "ecm_summary": null,
+    "diagnostics": {
+      "bg_lm_stat": null,
+      "bg_lm_pvalue": null,
+      "white_stat": null,
+      "white_pvalue": null,
+      "jb_stat": 0.7170896293221133,
+      "jb_pvalue": 0.6986923134777621,
+      "cusum_stat": 0.3551015033247037,
+      "cusum_pvalue": 0.9996021542196382
+    }
+  },
+  "gst": {
+    "selected_order": "{'gdp_growth': [0], 'unemployment': [0], 'imports_real': [0], 'govexp': [0]}",
+    "nobs": 32,
+    "aic": -70.22038536708538,
+    "bic": -59.9602340474873,
+    "params": {
+      "const": -3.3754005564383363,
+      "gst.L1": 0.4552215735676053,
+      "gdp_growth.L0": 0.02414275307005298,
+      "unemployment.L0": 0.012648344538464917,
+      "imports_real.L0": -0.35151658126402907,
+      "govexp.L0": 0.7350061616281094
+    },
+    "bounds_test": null,
+    "ecm_summary": null,
+    "diagnostics": {
+      "bg_lm_stat": null,
+      "bg_lm_pvalue": null,
+      "white_stat": null,
+      "white_pvalue": null,
+      "jb_stat": 0.6305976388957379,
+      "jb_pvalue": 0.7295708317398834,
+      "cusum_stat": 0.5380200669055585,
+      "cusum_pvalue": 0.934335432863539
+    }
+  },
+  "fed": {
+    "selected_order": "{'gdp_real': [0, 1], 'gdp_growth': [0], 'inflation': [0, 1], 'unemployment': [0, 1], 'govexp': [0], 'dummy_2014': [0]}",
+    "nobs": 32,
+    "aic": -80.01054847214644,
+    "bic": -62.42171763854972,
+    "params": {
+      "const": -30.585919502558568,
+      "fed.L1": 0.7708317509365026,
+      "gdp_real.L0": 66.52468745795022,
+      "gdp_real.L1": -65.16525601552257,
+      "gdp_growth.L0": -0.6249616251544694,
+      "inflation.L0": 0.00439040404063154,
+      "inflation.L1": 0.015089389332221814,
+      "unemployment.L0": 0.013524845094683602,
+      "unemployment.L1": -0.025954632828893626,
+      "govexp.L0": -0.3145180875586906,
+      "dummy_2014.L0": 0.10574505502636589
+    },
+    "bounds_test": null,
+    "ecm_summary": null,
+    "diagnostics": {
+      "bg_lm_stat": null,
+      "bg_lm_pvalue": null,
+      "white_stat": null,
+      "white_pvalue": null,
+      "jb_stat": 1.3674917543750278,
+      "jb_pvalue": 0.5047228172196725,
+      "cusum_stat": 0.33029759951688037,
+      "cusum_pvalue": 0.9999068818992081
+    }
+  }
+}
