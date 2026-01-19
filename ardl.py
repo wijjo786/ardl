@@ -148,7 +148,8 @@ html, body, [class*="css"] {
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 
-.stDeployButton {display: none;}
+
+            
             [data-testid="collapsedControl"] {
     display: block !important;
     visibility: visible !important;
