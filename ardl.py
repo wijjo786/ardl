@@ -145,6 +145,9 @@ html, body, [class*="css"] {
     line-height: 1.6;
 }
 
+
+
+            
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 .stDeployButton,
@@ -196,7 +199,7 @@ button[kind="header"] {
     padding: 0rem var(--space-10) var(--space-12);
     max-width: 1800px;
     margin: 0 auto;
-    padding-top: 0rem !important;
+    padding-top: 1rem !important;
 }
 
 /* Remove Streamlit's default top padding */
@@ -404,7 +407,7 @@ section[data-testid="stSidebar"] .uploadedFile:hover {
     border-radius: var(--radius-xl);
     padding: var(--space-4);
     margin-bottom: var(--space-4);
-    margin-top: 0 !important;
+    margin-top: 3rem !important;
     box-shadow: var(--shadow-md);
     position: relative;
     overflow: hidden;
