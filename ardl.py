@@ -407,7 +407,7 @@ section[data-testid="stSidebar"] .uploadedFile:hover {
     border-radius: var(--radius-xl);
     padding: var(--space-4);
     margin-bottom: var(--space-4);
-    margin-top: 3rem !important;
+    margin-top: 5rem !important;
     box-shadow: var(--shadow-md);
     position: relative;
     overflow: hidden;
