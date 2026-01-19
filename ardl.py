@@ -147,8 +147,17 @@ html, body, [class*="css"] {
 
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
-header {visibility: hidden;}
+
 .stDeployButton {display: none;}
+            [data-testid="collapsedControl"] {
+    display: block !important;
+    visibility: visible !important;
+}
+
+button[kind="header"] {
+    display: block !important;
+    visibility: visible !important;
+}
 
 .main .block-container {
     padding: 0rem var(--space-10) var(--space-12);
