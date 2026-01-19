@@ -147,10 +147,38 @@ html, body, [class*="css"] {
 
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
+.stDeployButton,
+button[kind="primary"],
+button[kind="primaryFormSubmit"],
+[data-testid="stHeader"] button[kind="primary"],
+header button[kind="primary"] {
+    display: none !important;
+    visibility: hidden !important;
+}
 
-
+/* Hide "Deploy" text specifically */
+button:has(p:contains("Deploy")),
+button[title*="Deploy"],
+button[aria-label*="Deploy"] {
+    display: none !important;
+}
             
-            [data-testid="collapsedControl"] {
+
+header[data-testid="stHeader"] {
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+}
+[data-testid="stToolbar"] > div:not(:has(button[kind="header"])) {
+    display: none !important;
+}
+/* Or alternatively, just hide specific toolbar items */
+[data-testid="stToolbar"] [data-testid="stStatusWidget"] {
+    display: none !important;
+}
+
+
+             
+[data-testid="collapsedControl"] {
     display: block !important;
     visibility: visible !important;
 }
@@ -160,6 +188,10 @@ button[kind="header"] {
     visibility: visible !important;
 }
 
+
+
+
+            
 .main .block-container {
     padding: 0rem var(--space-10) var(--space-12);
     max-width: 1800px;
